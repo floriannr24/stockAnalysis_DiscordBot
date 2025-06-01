@@ -29,7 +29,7 @@ async def alert(t1_closeToClose, bool_isHighUSTodayDay_gte_ClosePreviousDay):
         if t1_closeToClose <= -1.4:
             strings.append("- closeToOpen [-0.4% - 0%] ---> 97% closeValReached")
 
-    if bool_isHighUSTodayDay_gte_ClosePreviousDay == "no" and date.isoweekday() == 1:
+    if bool_isHighUSTodayDay_gte_ClosePreviousDay == False and date.isoweekday() == 1:
         strings.append("- closeToOpen [<= 0%] ---> 93% closeValReached // 90% openToHighÜber0.2 // 80% openToHighÜber0.4")
 
     return dateStr, strings

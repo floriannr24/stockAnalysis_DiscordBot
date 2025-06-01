@@ -57,7 +57,7 @@ class DiscordBot():
                 await interaction.response.send_message(embed=embed)
                 return
 
-            if t1_closetoclose and closevalreached:
+            if not t1_closetoclose is None and not closevalreached is None:
                 dateStr, strings = await asyncio.wait_for(alert(t1_closetoclose, closevalreached), 20)
 
                 if not strings:
